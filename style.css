@@ -1,0 +1,28 @@
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Вспомогательный класс */
+.mtb-3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.table {
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-collapse: collapse;
+}
+
+/* Отцентрируем содержимое ячеек */
+.table th, .table td {
+  text-align: center;
+  padding: 10px;
+}
+
+.table th {
+  background-color: #1e88e5;
+  color: #ffffff;
+}
