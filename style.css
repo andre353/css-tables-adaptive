@@ -110,3 +110,27 @@
     text-overflow: ellipsis;
   }
 }
+
+/* 3. Адаптив:  - каждая строка tr идет своим блоком */
+@media (max-width: 1000px) {
+  /* Добавить блочность рядам */
+  .table-3 tr {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  /*Добавить блочность ячейкам td и заголовкам th */
+  .table-3 th, .table-3 td {
+    display: block;
+    text-align: center;
+  }
+
+  .table.table-3 td {
+    border-right: none;
+  }
+
+  .table-3 thead {
+    position: sticky;
+    top: 0
+  }
+}
