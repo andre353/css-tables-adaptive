@@ -1,0 +1,17 @@
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.table {
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-collapse: collapse;
+  white-space: nowrap; /*запрещаем перенос строк в ячейке*/
+}
+
+.table th, .table td {
+  text-align: center;
+  padding: 10px;
+}
