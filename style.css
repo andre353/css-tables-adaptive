@@ -57,3 +57,45 @@
   /* тело блока таблицы скрывается, добавляем тень еще раз */
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+/* 2. Адаптив: делаем элементы таблицы блочными, при этом заголовочные ячейки будут выстраиваться по вертикали, а все прочие элементы будут их обтекать  - TABLE Transposing  */
+
+@media (max-width: 1000px) {
+  .table-2 {
+    display: block;
+    width: 100%;
+  }
+
+  .table-2 thead,
+  .table-2 tbody,
+  .table-2 thead th {
+    display: block;
+  }
+
+  .table-2 thead {
+    float: left;
+  }
+
+  .table-2 tbody {
+    overflow-x: auto;
+  }
+
+  /* Отображаем ряды как ячейки */
+  .table-2 tbody tr {
+    display: table-cell; /*выстрояться в один длинный ряд*/
+    border-right: 1px solid #ccc;
+  }
+  /* каждую td делаем блочной */
+  .table-2 td {
+    display: block;
+  }
+
+  /* Убираем двойную рамку */
+  .table.table-2 td {
+    border-right: none;
+  }
+
+  .table-2 tbody tr:last-child {
+    border-right: none;
+  }
+}
