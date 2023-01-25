@@ -12,6 +12,90 @@
 }
 
 .table th, .table td {
-  text-align: center;
   padding: 10px;
+}
+
+.table thead {
+  display: none;
+}
+
+/* Each tr - separate block element */
+.table,
+.table tbody,
+.table tr,
+.table td {
+  display: block;
+}
+
+.table tr {
+  margin-bottom: 15px;
+  border: 1px solid teal;
+}
+
+.table td {
+  text-align: right;
+  position: relative;
+}
+
+.table td::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  width: 40%;
+  padding-left: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  display: block;
+}
+
+/* Убираем двойную рамку */
+.table td, .table th {
+  border: none;
+}
+
+@media only screen and (min-width: 36em) {
+
+  .table td {
+    text-align: center;
+  }
+
+  .table td::before {
+    content: '';
+    display: none;
+  }
+
+  .table thead {
+    display: table-header-group;
+  }
+
+  .table {
+    display: table;
+  }
+
+  .table tbody {
+    display: table-row-group;
+  }
+
+  .table tr {
+    display: table-row;
+  }
+
+  .table td {
+    display: table-cell;
+  }
+  
+  .table tr {
+    border: 1px solid transparent;
+  }
+
+  .table td, .table th {
+    text-align: center;
+    border-bottom: 1px solid teal;
+  }
+
+  .table tr:last-child td {
+    border-bottom: 1px solid transparent;
+  }
+
 }
