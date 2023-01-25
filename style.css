@@ -26,3 +26,21 @@
   background-color: #1e88e5;
   color: #ffffff;
 }
+/* чередование четных и нечетных ячеек заголовка по цвету */
+.table th:nth-child(odd) {
+  background-color: #2196f3;
+}
+
+/* чередование четных и нечетных рядов по цвету */
+.table tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* выделение hovered ряда по цвету */
+.table tr {
+  transition: all .3s;
+}
+
+.table tr:hover {
+  background-color: #cccccc;
+}
